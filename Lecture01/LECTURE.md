@@ -38,7 +38,7 @@ module.exports.sum = (num1, num2) => {
 }
 
 //index.js
-const { sum } = require(‘./sum.js’);
+const { sum } = require('./sum.js');
 
 console.log(sum(5, 7));
 ```
