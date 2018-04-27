@@ -85,6 +85,6 @@ https://js-node.ru/site/article?id=23#fs_fs_readfile_file_options_callback
 - ```inspect```     
 https://nodejs.org/dist/latest-v8.x/docs/api/util.html 
 
-####P.S. полный список можно найти тут https://nodejs.org/dist/latest-v8.x/docs/api/
+P.S. полный список можно найти тут https://nodejs.org/dist/latest-v8.x/docs/api/
 
 
