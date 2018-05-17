@@ -9,9 +9,9 @@ passport.serializeUser(function(user, done) {
 });
 
 //При последующих запросах вызывается deserializeUser, который возвращает
-//email сохраненный в саенсе. По этому имейлу получаем объект юзера из модели 
+//email сохраненный в сеансе. По этому имейлу получаем объект юзера из модели 
 //и передаем его дальше при помощи  done. Именно после этого действия данные 
-//о пользователе становяться доступными в "req.user".
+//о пользователе становятся доступными в "req.user".
 passport.deserializeUser(function(email, done) {
     let user = UserModel.find(email);
     done(null, user);
