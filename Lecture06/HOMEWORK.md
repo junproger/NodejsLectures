@@ -10,3 +10,4 @@
 
 ### Статьи:
 - mongoose CRUD(create read update delete) https://metanit.com/web/nodejs/6.8.php
+- bcrypt https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt
