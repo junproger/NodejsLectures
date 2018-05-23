@@ -1,6 +1,6 @@
 ### ДЗ:
 1. Создать mongoose модель юзера и заменить ей текущую модель. Не забыть заменить места использования find и create методов.
-2. Создать mongoose модель для статьи(post). У статьи. Должны быть такие поля: title(String), text(String), author(Object со полями id, name), comments(Array), likes(Array), date(Date).
+2. Создать mongoose модель для статьи(post). У статьи должны быть такие поля: title(String), text(String), author(Object со полями id, name), comments(Array), likes(Array), date(Date).
 3. Создать страницу posts, на которой будут размещаться статьи пользователей. Добавить на страницу форму создания статьи и список последних статей.
 4. Добавить новые пути(route): ```/posts``` (POST для обработки формы создания статьи), ```/posts```(GET для получения списка статей).
 
@@ -10,3 +10,4 @@
 
 ### Статьи:
 - mongoose CRUD(create read update delete) https://metanit.com/web/nodejs/6.8.php
+- bcrypt https://www.abeautifulsite.net/hashing-passwords-with-nodejs-and-bcrypt
