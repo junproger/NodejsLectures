@@ -346,4 +346,60 @@ Array
 const Blog = mongoose.model('Blog', blogSchema);
 ``` 
 
+### MongoDB Настройка запросов и сортировка
+Чтобы ограничить выборку выборку двумя документами:
+
+```javascript
+db.users.find().limit(2)
+//тоже самое
+db.getCollection("users").find().limit(2)
+```
+
+Пропустить первые три записи
+```javascript
+db.users.find().skip(3)
+```
+
+Сортировать по возрастанию по полю name:
+```javascript
+db.users.find().sort({name: 1})
+```
+
+Можно совмещать все эти функции в одной цепочке:
+```javascript
+db.users.find().sort({name: 1}).skip(3).limit(3)
+```
+
+### MongoDB Indexes
+
+Индексы поддерживают эффективное выполнение запросов в MongoDB.  
+Без индексов MongoDB должен выполнить сканирование коллекции, то   
+есть сканировать каждый документ в коллекции, чтобы выбрать те   
+документы, которые соответствуют запросу. Если для запроса   
+существует соответствующий индекс, MongoDB может использовать  
+индекс для ограничения количества документов, которые нужно проверить.
+
+Single Field(Одиночный индекс)
+```javascript
+db.collection.createIndex({ name: -1 })
+```
+
+Compound Index(Составной индекс)
+```javascript
+db.collection.createInde({ userid: 1, score: -1 })
+```
+
+
+https://docs.mongodb.com/manual/indexes/
+
+### Mongoose Quering
+
+http://mongoosejs.com/docs/api.html#Query
+
+
+
+[MongoDB docs](https://docs.mongodb.com)
+[Mongoose docs](http://mongoosejs.com/docs/guide.html)
+
+
 
