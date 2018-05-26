@@ -394,6 +394,18 @@ https://docs.mongodb.com/manual/indexes/
 
 ### Mongoose Quering
 
+.exec() возвращает нативный Promise
+```javascript
+MyModel.find({}).exec()
+```
+
+Без .exec() возвращается промисоподобный объект, который можно использовать точно так же как и промис.
+```javascript
+MyModel.find({})
+```
+
+Лучше всегда использовать .exec(), но можно обойтись и без него.
+
 http://mongoosejs.com/docs/api.html#Query
 
 
